@@ -1,3 +1,13 @@
+# Tools for JS compilation and Mixins (NODE):
 sudo apt-get install npm
 sudo npm install -g less jshint recess uglify-js
+
+# Commands for build:
+unlink css
+rm js/bootstrap.min.js
+rm js/bootstrap.js
+make
+ln -s bootstrap/css css
+ln -s ../bootstrap/js/bootstrap.min.js js/bootstrap.min.js
+ln -s ../bootstrap/js/bootstrap.js js/bootstrap.js
 

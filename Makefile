@@ -10,7 +10,15 @@ HR=\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\
 # BUILD ALL
 #
 
-all: build bootstrap
+all:
+	unlink css
+	rm js/bootstrap.min.js
+	rm js/bootstrap.js
+	make build
+	make bootstrap
+	ln -s bootstrap/css css
+	ln -s ../bootstrap/js/bootstrap.min.js js/bootstrap.min.js
+	ln -s ../bootstrap/js/bootstrap.js js/bootstrap.js
 
 #
 # BUILD DOCS
